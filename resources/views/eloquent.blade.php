@@ -1,3 +1,5 @@
+@extends('layouts.template')
+    @section('konten')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,8 +8,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Eloquent</title>
 </head>
-<body>@foreach ($mahasiswa as $data)
-<h3> {{$data->nama}}<small>[{{$data->nim}}]</small></h3>
+<body>
+    @foreach ($mhs as $data)
+    <h3> {{$data->nama}}<small>[{{$data->nim}}]</small></h3>
     <h5>Hobi :
         @foreach ($data->hobi as $val)
             <small>{{$val->hobi}}, </small>
@@ -23,6 +26,6 @@
     </h4>
     <hr>
 @endforeach
-
 </body>
 </html>
+@endsection

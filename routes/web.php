@@ -85,6 +85,37 @@ Route::get('eloquent', function()
 //latihan Eloquent
 Route::get('latihan-eloquent', function()
 {
-    $mahasiswa = Mahasiswa::with('mahasiswa','wali','dosen','hobi')->get()->take();
-    return view('latihan-eloquent',compact('mahasiswa'));
+    $mhs = Mahasiswa::with('wali','dosen','hobi')->get()->take(1);
+    return view('latihan-eloquent',compact('mhs'));
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('beranda', function()
+{
+    return view('beranda');
+});
+
+Route::get('kontak', function()
+{
+    return view('kontak');
+});
+
+Route::get('tentang', function()
+{
+    return view('tentang');
+});
+
+Route::get('eloquent', function()
+{
+    return view('eloquent 1');
+});
+
+Route::get('eloquent 2', function()
+{
+    return view('eloquent 2');
+});
+
+Route::resource('dosen', 'DosenController');
