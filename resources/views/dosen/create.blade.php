@@ -11,15 +11,15 @@
                 <div class="card-body">
                     <form action="{{route('dosen.store')}}" method="post">
                         @csrf
-                        <div class="form grup">
+                        <div class="form-grup">
                             <label for="">Nama Dosen</label>
                             <input type="text" name="nama" class="form-control" required>
                         </div>
-                        <div class="form grup">
+                        <div class="form-group">
                             <label for="">Nomor Induk Pegawai Dosen</label>
                             <input type="text" name="nipd" class="form-control" required>
                         </div>
-                        <div class="form grup">
+                        <div class="form-group">
                             <button type="submit" class="btn btn-primary">Simpan</button>
                         </div>
                     </form>

@@ -118,4 +118,8 @@ Route::get('eloquent 2', function()
     return view('eloquent 2');
 });
 
+//CRUD Laravel yang ini!!!!!!
 Route::resource('dosen', 'DosenController');
+Route::resource('hobi', 'HobiController');
+Route::resource('mahasiswa', 'MahasiswaController');
+Route::resource('wali', 'WaliController');

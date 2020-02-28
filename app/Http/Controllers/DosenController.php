@@ -36,7 +36,7 @@ class DosenController extends Controller
     public function show($id)
     {
         $dosen = Dosen::findOrFail($id);
-        return view('dosen.edit', compact('dosen'));
+        return view('dosen.show', compact('dosen'));
     }
 
     public function edit($id)

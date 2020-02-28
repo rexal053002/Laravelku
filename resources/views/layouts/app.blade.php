@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Riz') }}</title>
+    <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -24,7 +24,7 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravelku') }}
+                    AhadRiz
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -38,6 +38,19 @@
                             <li>
                                 <a href="{{route('dosen.index')}}" class="nav-link">Dosen</a>
                             </li>
+
+                            <li>
+                            <a href="{{route('hobi.index')}}" class="nav-link">Hobi</a>
+                            </li>
+
+                            <li>
+                            <a href="{{route('mahasiswa.index')}}" class="nav-link">Mahasiswa</a>
+                            </li>
+
+                            <li>
+                            <a href="{{route('wali.index')}}" class="nav-link">Wali</a>
+                            </li>
+
                         @endguest
                     </ul>
 

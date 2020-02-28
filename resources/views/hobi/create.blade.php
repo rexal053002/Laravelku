@@ -6,19 +6,14 @@
 
             <div class="card">
                 <div class="card-header">
-                    Tambah Data
+                    Tambah Data Hobi Mahasiswa
                 </div>
                 <div class="card-body">
-                    <form action="{{route('dosen.update', $dosen->id)}}" method="post">
-                        <input type="hidden" name="_method" value="PUT">
+                    <form action="{{route('hobi.store')}}" method="post">
                         @csrf
                         <div class="form-group">
-                            <label for="">Nama Dosen</label>
-                        <input type="text" name="nama" value="{{$dosen->nama}}" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="">Nomor Induk Pegawai Dosen</label>
-                        <input type="text" name="nipd" value="{{$dosen->nipd}}" class="form-control" required>
+                            <label for="">Hobi Mahasiswa</label>
+                            <input type="text" name="hobi" class="form-control" required>
                         </div>
                         <div class="form-group">
                             <button type="submit" class="btn btn-primary">Simpan</button>
